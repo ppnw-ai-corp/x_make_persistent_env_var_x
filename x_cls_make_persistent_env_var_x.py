@@ -222,6 +222,7 @@ _DEFAULT_TOKEN_SPECS: tuple[TokenSpec, ...] = (
     TokenSpec(name="TESTPYPI_API_TOKEN", label="TestPyPI API Token", required=True),
     TokenSpec(name="PYPI_API_TOKEN", label="PyPI API Token", required=True),
     TokenSpec(name="GITHUB_TOKEN", label="GitHub Token", required=True),
+    TokenSpec(name="COPILOT_REQUESTS_PAT", label="Copilot Requests PAT", required=True),
     TokenSpec(name="SLACK_TOKEN", label="Slack Token", required=True),
     TokenSpec(name="SLACK_BOT_TOKEN", label="Slack Bot Token", required=False),
 )

@@ -105,6 +105,19 @@ def test_default_token_specs_include_slack_bot_token() -> None:
     )
 
 
+def test_default_token_specs_include_copilot_pat() -> None:
+    instance = x_cls_make_persistent_env_var_x(quiet=True)
+    copilot_spec = next(
+        (spec for spec in instance.token_specs if spec.name == "COPILOT_REQUESTS_PAT"),
+        None,
+    )
+    expect(copilot_spec is not None, "Copilot Requests PAT spec should be present")
+    if copilot_spec is None:  # pragma: no cover - defensive narrow for type checkers
+        error_message = "Copilot Requests PAT spec unexpectedly missing"
+        raise RuntimeError(error_message)
+    expect(copilot_spec.required, "Copilot Requests PAT must be marked as required")
+
+
 def test_persist_current_sets_present_variables() -> None:
     state: dict[str, str] = {}
     tokens: list[tuple[str, str]] = [("FOO", "Foo token")]
