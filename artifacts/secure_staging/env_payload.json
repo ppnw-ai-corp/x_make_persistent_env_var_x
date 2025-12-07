@@ -1,0 +1,45 @@
+{
+  "command": "x_make_persistent_env_var_x",
+  "parameters": {
+    "action": "persist-current",
+    "include_existing": true,
+    "notes": "Hostinger website + Segmentus credential sweep 2025-12-01",
+    "tokens": [
+      {
+        "name": "GITHUB_TOKEN",
+        "label": "GitHub Token",
+        "required": true
+      },
+      {
+        "name": "COPILOT_REQUESTS_PAT",
+        "label": "Copilot Requests PAT",
+        "required": true
+      },
+      {
+        "name": "HOSTINGER_VPS_PASS",
+        "label": "Hostinger VPS Password",
+        "required": true
+      },
+      {
+        "name": "HOSTINGER_VPS_SSH_KEY",
+        "label": "Hostinger VPS SSH Key",
+        "required": true
+      },
+      {
+        "name": "SEGMENTUS_JUDICIUM_API_KEY",
+        "label": "Segmentus Judicium API Key",
+        "required": true
+      },
+      {
+        "name": "SLACK_TOKEN",
+        "label": "Slack Token",
+        "required": true
+      },
+      {
+        "name": "SLACK_BOT_TOKEN",
+        "label": "Slack Bot Token",
+        "required": false
+      }
+    ]
+  }
+}

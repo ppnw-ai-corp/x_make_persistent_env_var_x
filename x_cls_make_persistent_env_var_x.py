@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import IO, TYPE_CHECKING, Protocol, TypeVar, cast
 
 from x_make_common_x.json_contracts import validate_payload
+
 from x_make_persistent_env_var_x.json_contracts import (
     ERROR_SCHEMA,
     INPUT_SCHEMA,
