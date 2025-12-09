@@ -1,4 +1,5 @@
 """Launch the persistent environment vault GUI in one shot."""
+
 from __future__ import annotations
 
 import sys
@@ -9,7 +10,7 @@ WORKSPACE_ROOT = REPO_ROOT.parent
 if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
-from x_make_persistent_env_var_x.x_cls_make_persistent_env_var_x import (
+from x_make_persistent_env_var_x.x_cls_make_persistent_env_var_x import (  # noqa: E402 - requires workspace path inserted first
     run_cli,
 )
 
